@@ -1,0 +1,42 @@
+{
+  "name": "highland-review-site",
+  "version": "1.0.0",
+  "description": "Browse, filter, and compare independent reviews of Highland single malt Scotch whiskies. Curated tasting notes and scores, no API keys.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "prettier": "mikey-pro/prettier",
+  "stylelint": {
+    "extends": "mikey-pro/stylelint"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@mikey-pro/eslint-config-react": "^10.3.3",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^4.3.1",
+    "eslint": "^10.0.0",
+    "jsdom": "^29.1.1",
+    "mikey-pro": "^10.3.3",
+    "prettier": "^3.0.0",
+    "stylelint": "^16.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.9"
+  }
+}
