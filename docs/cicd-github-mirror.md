@@ -1,6 +1,10 @@
 # CICD GitHub mirror (wolfe.tools is authoritative)
 
-**This document is the canonical reference for the one-push mirror pattern. To enable it on a repo, add a `.gitea/workflows/mirror.yml` and push to wolfe.tools. Note: this repo is currently local-only — no remote is wired and the workflow has not been added here yet.**
+**Status for this repo (wired 2026-06-27):** `origin` = `git@git.wolfe.tools:mikl/highland-review-site.git`; the GitHub mirror at `chiefmikey/highland-review-site` is live and in sync. The mirror is implemented as a **Gitea-native server-side push-mirror** (`sync_on_commit: true`, configured via the Gitea API), NOT the Actions-workflow pattern described below. The native push-mirror is the current fleet standard (ADR `2026-06-24-autonomous-repos-gitea-only-no-github-mirror`); the `.gitea/workflows/mirror.yml` approach documented in the rest of this file is the older pattern, kept here as background. You still push **once**, to wolfe.tools, and Gitea propagates to GitHub automatically.**
+
+---
+
+**The original `.gitea/workflows/mirror.yml` reference follows (legacy pattern, retained for context).**
 
 ## Principle
 

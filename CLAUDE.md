@@ -53,8 +53,8 @@ Run `npm test` (vitest). When you change `lib/filter.ts` or `lib/sort.ts`, exten
 
 ## Git / remote
 
-The intended authoritative remote is `git@git.wolfe.tools` (self-hosted Gitea). `github.com/chiefmikey/highland-review-site` is a read-only public mirror auto-synced by a Gitea Actions workflow — never push to GitHub directly, push once to wolfe.tools. See `docs/cicd-github-mirror.md` for the full topology and workflow details.
+The authoritative remote is `origin` = `git@git.wolfe.tools:mikl/highland-review-site.git` (self-hosted Gitea). `github.com/chiefmikey/highland-review-site` is a read-only public mirror — never push to GitHub directly, push once to wolfe.tools and Gitea propagates. See `docs/cicd-github-mirror.md` for the full topology.
 
-Current state: local-only. Neither the Gitea remote nor the GitHub mirror is wired yet.
+Current state: wired and live. `origin` points at Gitea; the GitHub mirror is a Gitea-native server-side push-mirror (`sync_on_commit: true`), not a `.gitea/workflows/mirror.yml` Actions workflow — this is the current fleet standard. Every push to origin auto-syncs the GitHub mirror. The Gitea owner is `mikl` (the fleet's single Gitea account); only the GitHub mirror lives under `chiefmikey`.
 
 Commit conventions: `feat:`, `fix:`, `chore:`, `refactor:`, `docs:`, `test:`. Atomic commits — one logical change per commit. No AI attribution in commit messages.
