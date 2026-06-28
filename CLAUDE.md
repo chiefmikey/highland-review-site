@@ -6,14 +6,14 @@ Static Vite + React 18 + TypeScript SPA for browsing, filtering, sorting, and co
 
 ## Commands
 
-| Command | What it does |
-|---|---|
-| `npm run dev` | Start the Vite dev server |
-| `npm run build` | `tsc && vite build` — typecheck then produce production bundle |
-| `npm run preview` | Serve the production build locally |
-| `npm test` | `vitest run` — run the full test suite |
-| `npm run lint` | `eslint .` via mikey-pro flat config |
-| `npm run format` | `prettier --write .` via mikey-pro Prettier config |
+| Command           | What it does                                                   |
+| ----------------- | -------------------------------------------------------------- |
+| `npm run dev`     | Start the Vite dev server                                      |
+| `npm run build`   | `tsc && vite build` — typecheck then produce production bundle |
+| `npm run preview` | Serve the production build locally                             |
+| `npm test`        | `vitest run` — run the full test suite                         |
+| `npm run lint`    | `eslint .` via mikey-pro flat config                           |
+| `npm run format`  | `prettier --write .` via mikey-pro Prettier config             |
 
 Always run `npm run lint` and `npm run format` after editing any source file. Run `npm run build` before claiming a change is done — it catches type errors the dev server does not surface.
 
